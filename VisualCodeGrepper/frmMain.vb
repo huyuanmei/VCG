@@ -318,6 +318,9 @@ Public Class frmMain
                     If asAppSettings.IsVerbose = True Then Console.WriteLine("Scanning file: " & strItem)
                 End If
                 rtResultsTracker.FileCount += 1
+                    
+                'fix the wrong line numbe bug
+                rtResultsTracker.ResetFileCountVars()
 
 
                 '== Avoid the GUI locking or hanging during processing ==
